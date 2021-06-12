@@ -1,10 +1,27 @@
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
+import Details from "../components/Details";
+import Form from "../components/Form";
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #22314f;
+`;
 
-export default function Home() {
-  return <Title>My page</Title>
-}
+const index = () => {
+  return (
+    <StyledWrapper>
+      <Details />
+      <Form />
+    </StyledWrapper>
+  );
+};
+
+const StyledIndex = styled(index)`
+  height: 100%;
+`;
+
+export default StyledIndex;
